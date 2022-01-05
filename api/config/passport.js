@@ -1,6 +1,7 @@
 //a terminar modularizacion
 const passport = require("passport");
 const { Users } = require("../models");
+require("dotenv").config();
 
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const localStrategy = require("passport-local").Strategy;
@@ -18,9 +19,8 @@ passport.deserializeUser(function (id, done) {
 passport.use(
   new GoogleStrategy(
     {
-      clientID:
-        "50002597651-fb2nae1c25i7d3mhphsu7rvjut5usgqs.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientID: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+      clientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
       callbackURL: "http://localhost:3001/auth/google/callback",
       passReqToCallback: true,
     },
@@ -28,22 +28,20 @@ passport.use(
       Users.findOne({
         where: {
           googleId: profile.id,
-        }
-      })
-      .then(user => {
+        },
+      }).then((user) => {
         if (user) {
           return done(null, user);
-        }
-        else{
+        } else {
           Users.create({
             name: profile.displayName,
             googleId: profile.id,
             email: profile.emails[0].value,
           })
-          .then(user => done(null, user))
-          .catch(err => done(err));
+            .then((user) => done(null, user))
+            .catch((err) => done(err));
         }
-      })
+      });
     }
   )
 );
