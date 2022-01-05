@@ -1,7 +1,6 @@
 //a terminar modularizacion
 const passport = require("passport");
 const { Users } = require("../models");
-require("dotenv").config();
 
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const localStrategy = require("passport-local").Strategy;
@@ -19,7 +18,7 @@ passport.deserializeUser(function (id, done) {
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+      clientID: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
       clientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
       callbackURL: "http://localhost:3001/auth/google/callback",
       passReqToCallback: true,
