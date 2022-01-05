@@ -1,6 +1,7 @@
 //a terminar modularizacion
 const passport = require("passport");
 const { Users } = require("../models");
+require("dotenv").config();
 
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const localStrategy = require("passport-local").Strategy;
