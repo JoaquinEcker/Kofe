@@ -17,11 +17,27 @@ Before doing this you must create a new Postgres Data Base called "kofedb" and s
 
 After that you can run "npm start".
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `npm run client`
 
 Allows you to see the front of the project, with any connection with the db (not recommended).
+
+<p float="left">
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-23-17.png" width ="400" height = "190" >
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-24-27.png" width ="400" height = "190" >
+</p>
+
+<p float="left">
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-26-28.png" width ="400" height = "190" >
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-28-41.png" width ="400" height = "190" >
+</p>
+
+<p float="left">
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-29-21.png" width ="400" height = "190" >
+<img src="public/preVisual/Captura%20de%20pantalla_2022-01-18_15-34-17.png" width ="400" height = "190" >
+</p>
+
