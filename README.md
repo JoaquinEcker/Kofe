@@ -4,7 +4,7 @@ This project was made using ReactJs, Redux, Tailwind CSS, Express, Passport, Seq
 
 # Details
 
-Kofe is an E-commerce where you can find coffee capsules, machines or any type of accesory. The platform allows to register, log in, search for different products an add them to your cart. Also you can see your previous purchases or access as an Administrator and edit items, change permissions and check users.
+Kofe is an E-commerce where you can find coffee capsules, machines or any type of accesory. The platform allows to register, log in, search for different products and add them to your cart. Also you can see your previous purchases or access as an Administrator and edit items, change permissions and check users.
 
 
 ## Available Scripts
